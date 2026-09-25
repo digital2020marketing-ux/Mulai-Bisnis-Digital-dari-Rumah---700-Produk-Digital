@@ -21,9 +21,9 @@ async function hashValue(val: string): Promise<string> {
   const cleanVal = val.trim().toLowerCase();
   if (!cleanVal) return '';
   try {
-    if (window.crypto && window.crypto.subtle) {
+    if (typeof window !== 'undefined' && window.crypto && window.crypto.subtle) {
       const msgBuffer = new TextEncoder().encode(cleanVal);
-      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashBuffer = await window.crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
     }
