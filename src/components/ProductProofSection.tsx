@@ -7,7 +7,7 @@ import {
   X, 
   Maximize2
 } from 'lucide-react';
-import productBundleNewImg from '../assets/images/product_bundle_new.png';
+import productBundleNewImg from '../assets/images/product_bundle_new.webp';
 
 interface ProductProofSectionProps {
   onScrollToCatalog: () => void;
@@ -61,8 +61,8 @@ export const ProductProofSection: React.FC<ProductProofSectionProps> = ({
               decoding="async"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;
-                if (!target.src.includes('product_bundle_new')) {
-                  target.src = '/images/product_bundle_new.png';
+                if (!target.src.includes('product_bundle_new.webp')) {
+                  target.src = '/images/product_bundle_new.webp';
                 }
               }}
             />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Home, FileText, Smartphone } from 'lucide-react';
-import bapakImg from '../assets/images/hp_laptop_business_1790338934193.jpg';
-import ibuImg from '../assets/images/ibu_hp_laptop_1790339068355.jpg';
+import bapakImg from '../assets/images/hp_laptop_business_1790338934193.webp';
+import ibuImg from '../assets/images/ibu_hp_laptop_1790339068355.webp';
 import { CHECKOUT_URL } from '../config/constants';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 
@@ -55,12 +55,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <img
                     src={ibuImg}
                     alt="Ibu-ibu usia 40+ menjalankan bisnis produk digital di rumah"
+                    width={300}
+                    height={225}
                     className="w-full h-auto object-cover aspect-[4/3]"
                     loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
-                      if (!target.src.includes('ibu_hp_laptop')) {
-                        target.src = '/images/ibu_hp_laptop_1790339068355.jpg';
+                      if (!target.src.includes('ibu_hp_laptop.webp')) {
+                        target.src = '/images/ibu_hp_laptop_1790339068355.webp';
                       }
                     }}
                   />
@@ -74,12 +78,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <img
                     src={bapakImg}
                     alt="Bapak-bapak usia 40+ menjalankan bisnis produk digital di rumah"
+                    width={300}
+                    height={225}
                     className="w-full h-auto object-cover aspect-[4/3]"
-                    loading="eager"
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
-                      if (!target.src.includes('hp_laptop_business')) {
-                        target.src = '/images/hp_laptop_business_1790338934193.jpg';
+                      if (!target.src.includes('hp_laptop_business.webp')) {
+                        target.src = '/images/hp_laptop_business_1790338934193.webp';
                       }
                     }}
                   />
@@ -152,8 +159,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     fetchPriority="high"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
-                      if (!target.src.includes('ibu_hp_laptop')) {
-                        target.src = '/images/ibu_hp_laptop_1790339068355.jpg';
+                      if (!target.src.includes('ibu_hp_laptop.webp')) {
+                        target.src = '/images/ibu_hp_laptop_1790339068355.webp';
                       }
                     }}
                   />
@@ -174,12 +181,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     width={600}
                     height={450}
                     className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-300"
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
-                      if (!target.src.includes('hp_laptop_business')) {
-                        target.src = '/images/hp_laptop_business_1790338934193.jpg';
+                      if (!target.src.includes('hp_laptop_business.webp')) {
+                        target.src = '/images/hp_laptop_business_1790338934193.webp';
                       }
                     }}
                   />

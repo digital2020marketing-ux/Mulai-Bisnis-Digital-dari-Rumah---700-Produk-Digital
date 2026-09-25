@@ -12,21 +12,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://connect.facebook.net">
-    <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Meta Pixel Code -->
+    <!-- Preload Hero LCP Image -->
+    <link rel="preload" as="image" href="/images/ibu_hp_laptop_1790339068355.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Non-render-blocking Web Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap">
+    </noscript>
+
+    <!-- Optimized Meta Pixel Code (Deferred to avoid blocking main thread) -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1031140289908433');
-      fbq('track', 'PageView');
+      (function() {
+        var initialized = false;
+        function initPixel() {
+          if (initialized) return;
+          initialized = true;
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1031140289908433');
+          fbq('track', 'PageView');
+        }
+        if (document.readyState === 'complete') {
+          setTimeout(initPixel, 100);
+        } else {
+          window.addEventListener('load', function() {
+            setTimeout(initPixel, 100);
+          });
+        }
+      })();
     </script>
     <!-- End Meta Pixel Code -->
   </head>

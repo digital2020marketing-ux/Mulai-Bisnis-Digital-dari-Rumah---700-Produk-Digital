@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, CheckCircle, ExternalLink, Download } from 'lucide-react';
 import { ProductSample } from '../data/content';
-import bundleMockupImg from '../assets/images/bundle_digital_mockup_1790333522896.jpg';
+import bundleMockupImg from '../assets/images/bundle_digital_mockup_1790333522896.webp';
 import { CHECKOUT_URL } from '../config/constants';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 

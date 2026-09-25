@@ -1,7 +1,7 @@
-import islamicImg from '../assets/images/worksheet_preview_islamic_1790333539698.jpg';
-import kidsMathImg from '../assets/images/worksheet_preview_kids_math_1790333555213.jpg';
-import productBundleNewImg from '../assets/images/product_bundle_new.png';
-import marketingKitImg from '../assets/images/marketing_kit_guide_preview_1790334740501.jpg';
+import islamicImg from '../assets/images/worksheet_preview_islamic_1790333539698.webp';
+import kidsMathImg from '../assets/images/worksheet_preview_kids_math_1790333555213.webp';
+import productBundleNewImg from '../assets/images/product_bundle_new.webp';
+import marketingKitImg from '../assets/images/marketing_kit_guide_preview_1790334740501.webp';
 import { CHECKOUT_URL } from '../config/constants';
 
 export { CHECKOUT_URL };
