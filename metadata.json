@@ -1,0 +1,8 @@
+{
+  "name": "Mulai Bisnis Digital dari Rumah - 700+ Produk Digital",
+  "description": "Panduan dan akses 15.000+ aset produk digital siap jual untuk memulai bisnis rumahan tanpa stok barang dan tanpa pusing packing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
